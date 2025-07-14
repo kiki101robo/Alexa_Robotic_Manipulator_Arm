@@ -1,4 +1,4 @@
-# ALexa_Robotic_Mmanipulator_Arm
+# Alexa_Robotic_Mmanipulator_Arm
 
 A collection of ROS 2 packages for an Arduino-based robotic system with voice control integration through Amazon Alexa.
 
