@@ -127,7 +127,7 @@ Utility functions and helper modules used across multiple packages including com
    ```
 ## Demo Video
 
-**[Watch Arduino Bot Demo](https://drive.google.com/file/d/1r1NUiOVEtkRtTfM8pfEP1wNPOz5yEpx6/view?usp=sharing)**
+**[Watch Arduino Bot Demo](https://drive.google.com/file/d/1r1oeARy4o2HWet6lX1zeXPKRNVOuTKBM/view?usp=drive_link)**
 
 This video demonstrates:
 - Robot simulation in Gazebo
