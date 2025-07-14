@@ -125,6 +125,15 @@ Utility functions and helper modules used across multiple packages including com
    ```bash
    ros2 topic echo /robot_status
    ```
+## Demo Video
+
+**[Watch Arduino Bot Demo](https://drive.google.com/file/d/1qvHi43QQj6JAHF6cioCBSAB-RQ5DIhqP/view?usp=sharing)**
+
+This video demonstrates:
+- Robot simulation in Gazebo
+- Voice control integration
+- Motion planning capabilities
+- RViz visualization
 
 ### Hardware Mode (Coming Soon)
 
