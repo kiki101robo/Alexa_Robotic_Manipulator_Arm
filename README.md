@@ -1,30 +1,25 @@
-# Alexa_Robotic_Manipulator_Arm
+# ALexa_Robotic_Mmanipulator_Arm
 
-A comprehensive ROS workspace for an Arduino-based robotic system with voice control integration through Amazon Alexa.
+A collection of ROS 2 packages for an Arduino-based robotic system with voice control integration through Amazon Alexa.
 
 ## Overview
 
-This workspace contains a robotic system built around Arduino hardware with advanced features including motion planning, voice control, and remote operation capabilities. The system is designed to be controlled through voice commands via Amazon Alexa integration.
+This repository contains ROS 2 packages for a robotic system built around Arduino hardware with advanced features including motion planning, voice control, and remote operation capabilities. The system is designed to be controlled through voice commands via Amazon Alexa integration.
 
 **Work in Progress:** This project is currently under active development. The Arduino board integration is not yet complete. Currently, the system supports simulation-based operation with plans for full hardware integration.
 
-## Workspace Structure
+## Repository Structure
 
 ```
-arduinobot_ws/
-├── src/
-│   ├── alexabot_bringup/          # Main launch package for Alexa integration
-│   ├── arduinobot_controller/     # Robot control and driver nodes
-│   ├── arduinobot_cpp/           # C++ implementation and utilities
-│   ├── arduinobot_description/    # Robot URDF, meshes, and configuration
-│   ├── arduinobot_moveit/        # MoveIt! motion planning configuration
-│   ├── arduinobot_msgs/          # Custom message definitions
-│   ├── arduinobot_python_examples/ # Python examples and demos
-│   ├── arduinobot_remote/        # Remote control functionality
-│   └── arduinobot_utils/         # Utility functions and helpers
-├── build/                        # Build artifacts
-├── install/                      # Installation files
-└── log/                         # Build and runtime logs
+├── alexabot_bringup/          # Main launch package for Alexa integration
+├── arduinobot_controller/     # Robot control and driver nodes
+├── arduinobot_cpp/           # C++ implementation and utilities
+├── arduinobot_description/    # Robot URDF, meshes, and configuration
+├── arduinobot_moveit/        # MoveIt! motion planning configuration
+├── arduinobot_msgs/          # Custom message definitions
+├── arduinobot_python_examples/ # Python examples and demos
+├── arduinobot_remote/        # Remote control functionality
+└── arduinobot_utils/         # Utility functions and helpers
 ```
 
 ## Package Descriptions
@@ -77,23 +72,29 @@ Utility functions and helper modules used across multiple packages including com
 
 ## Installation
 
-1. **Clone the workspace:**
+1. **Create a ROS 2 workspace:**
    ```bash
-   git clone <repository-url> arduinobot_ws
-   cd arduinobot_ws
+   mkdir -p ~/arduinobot_ws/src
+   cd ~/arduinobot_ws/src
    ```
 
-2. **Install dependencies:**
+2. **Clone this repository:**
    ```bash
+   git clone <repository-url> .
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   cd ~/arduinobot_ws
    rosdep install --from-paths src --ignore-src -r -y
    ```
 
-3. **Build the workspace:**
+4. **Build the packages:**
    ```bash
    colcon build
    ```
 
-4. **Source the workspace:**
+5. **Source the workspace:**
    ```bash
    source install/setup.bash
    ```
@@ -139,15 +140,6 @@ The system responds to natural language commands through Alexa:
 - "Move to the kitchen"
 - "Pick up the object"
 - "Return to charging station"
-
-### Manual Control
-```bash
-# Direct movement commands
-ros2 topic pub /cmd_vel geometry_msgs/msg/Twist "..."
-
-# Motion planning
-ros2 run arduinobot_python_examples move_to_pose.py
-```
 
 ### Remote Interface
 Access the web interface at `http://localhost:8080` for manual control and monitoring.
@@ -215,5 +207,3 @@ Key configuration files:
 3. Make your changes
 4. Test thoroughly
 5. Submit a pull request
-
-**Note:** This project integrates Arduino hardware with ROS 2 and Amazon Alexa for voice-controlled robotics. Ensure all hardware connections are secure and software dependencies are properly installed before use.
